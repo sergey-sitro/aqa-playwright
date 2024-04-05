@@ -1,0 +1,17 @@
+export const errorBorderColorCSS = 'rgb(220, 53, 69)';
+export const testName = 'testName';
+export const testLastName = 'testLastName';
+export const testEmail = 'test-email@test.test';
+export const testPassword = 'Qwertyui1';
+export const invalidName = 'test123';
+export const invalidLastName = 'test123';
+export const shortName = 't';
+export const longName = 'testabctestabctestabc';
+export const minimumLengthName = 'te';
+export const maximumLengthName = 'testabctestabctestab';
+export const shortLastName = 't';
+export const minimumLengthLastName = 'te';
+export const maximumLengthLastName = 'testabctestabctestab';
+export const longLastName = 'testabctestabctestabc';
+export const invalidEmails = ['test', 'test@', 'test@test', 'test@test.'];
+export const invalidPasswords = ['qwertyu', 'Qwerty1', 'Qwertyui', 'QwertyuiQwertyu1'];
