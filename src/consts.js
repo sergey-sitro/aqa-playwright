@@ -1,0 +1,1 @@
+export const REGULAR_USER_STORAGE_STATE_PATH = './state/regular-user.json';
