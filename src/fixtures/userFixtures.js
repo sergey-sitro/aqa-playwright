@@ -1,4 +1,4 @@
-import { expect as baseExpect, test as base } from "@playwright/test";
+import { expect as baseExpect, request as baseRequest, test as base } from "@playwright/test";
 import { WelcomePage } from "../pageObjects/WelcomePage/WelcomePage.js";
 import GaragePage from "../pageObjects/GaragePage/GaragePage.js";
 import { REGULAR_USER_STORAGE_STATE_PATH } from "../consts.js";
@@ -19,6 +19,14 @@ export const test = base.extend({
         await use(page);
 
         await ctx.close();
+    },
+    request: async ({}, use)=>{
+        const req = await request.newContext({
+            storageState: REGULAR_USER_STORAGE_STATE_PATH
+        })
+        await use(req)
+
+        await req.dispose()
     },
     garagePage: async ({page}, use)=>{
         const garagePage = new GaragePage(page);
@@ -42,3 +50,4 @@ export const test = base.extend({
 })
 
 export const expect = baseExpect
+export const request = baseRequest
